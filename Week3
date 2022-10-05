@@ -1,0 +1,59 @@
+#25305
+n, k = map(int, input().split(" "))
+
+score_list = list(map(int, input().split(" ")))
+
+for i in range (1,n):
+    for j in range (0, n-1):
+        if score_list[j] < score_list[j+1]:
+            score_list[j+1], score_list[j] = score_list[j], score_list[j+1]
+
+print(score_list[k-1])
+
+#10872
+def factorial(n):
+    result = 1
+    if n > 0 :
+        result = n * factorial(n-1)
+    return result
+
+n = int(input())
+print(factorial(n))
+//------------------------------
+def fac(N):
+    if N == 1:
+        return 1
+    else:
+        return N*fac(N-1)
+    
+N = int(input())
+print(fac(N)) //백준에서는 오류가 뜨지만 GDB에서는 작동하는 제 코드입니다 차이는 잘 모르겠어요
+
+#2798
+N, M = map(int, input().split(" "))
+
+result = 0
+
+card_list = list(map(int, input().split(" ")))
+
+for i in range (0, N-2):
+    for j in range (i+1, N-1):
+        for k in range (j+1, N):
+            if card_list[i]+card_list[j]+card_list[k] <= M:
+                if card_list[i]+card_list[j]+card_list[k] > result:
+                    result = card_list[i]+card_list[j]+card_list[k]
+
+print(result)
+
+#10815
+N = int(input())
+N_set = set(map(int, input().split(" ")))
+
+M = int(input())
+M_list = list(map(int, input().split(" ")))
+
+for i in M_list:
+    if i in N_set:
+        print(1, end=' ')
+    else:
+        print(0, end=' ')
