@@ -1,0 +1,42 @@
+#10818
+N = int(input())
+
+list_N = list(map(int, input().split(" ")))
+min = list_N[0]
+max = list_N[0]
+
+for i in range(N):
+    if (list_N[i] <= min):
+        min = list_N[i]
+    elif(list_N[i] > max):
+        max = list_N[i]
+        
+print(min, max)
+
+#11021
+T = int(input())
+
+for i in range(1, T+1):
+    A, B = map(int, input().split(" "))
+    print("Case #%d: %d" %(i,A+B))
+
+#14681
+x = int(input())
+y = int(input())
+
+if x > 0 :
+    if y > 0 :
+        print(1)
+    elif y < 0 :
+        print(4)
+
+if x < 0 :
+    if y < 0 :
+        print(3)
+    elif y > 0 :
+        print(2)
+
+#18108
+budda = int(input())
+
+print(budda-543)
