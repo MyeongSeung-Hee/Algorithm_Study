@@ -21,3 +21,22 @@ for i in PrimeNum:
         HowManyPrime += 1
 
 print(HowManyPrime)
+
+#1676
+n = int(input())
+HowManybeforeNum = 0
+
+def factorial(n):
+    result = 1
+    if n > 0 :
+        result = n * factorial(n-1)
+    return result
+
+result = str(factorial(n))
+
+for i in result[::-1]:
+    if i != '0':
+        break
+    HowManybeforeNum += 1
+
+print(HowManybeforeNum)
