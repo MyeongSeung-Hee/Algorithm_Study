@@ -40,3 +40,8 @@ for i in result[::-1]:
     HowManybeforeNum += 1
 
 print(HowManybeforeNum)
+
+#1373
+Binary = int(input(),2)
+
+print(oct(Binary)[2:])
